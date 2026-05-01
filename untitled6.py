@@ -317,7 +317,7 @@ uploaded = st.sidebar.file_uploader("Upload cleaned data (CSV/Excel)", type=["cs
 
 default_paths = [
     "cleaned_5min_outlier_free.xlsx",
-    "cleaned_2min_outlier_free.xlsx",
+    "cleaned_1min_outlier_free.xlsx",
 ]
 
 data_path = None
@@ -330,10 +330,10 @@ else:
             break
 
 if data_path is None:
-    st.warning("Upload a cleaned dataset (CSV/Excel) or place cleaned_2min_outlier_free.xlsx / cleaned_5min_outlier_free.xlsx in the working directory.")
+    st.warning("Upload a cleaned dataset (CSV/Excel) or place cleaned_1min_outlier_free.xlsx / cleaned_5min_outlier_free.xlsx in the working directory.")
     st.stop()
 
-sheet = st.sidebar.text_input("Excel sheet name (for .xlsx)", value="cleaned_2min")
+sheet = st.sidebar.text_input("Excel sheet name (for .xlsx)", value="cleaned_1min")
 
 # -------------------------------
 # Step 1 — Resampling (1–5 minutes)
