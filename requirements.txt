@@ -6,3 +6,4 @@ plotly
 openpyxl
 matplotlib
 statsmodels
+tensorflow==2.16.1
